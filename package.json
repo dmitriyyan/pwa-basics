@@ -1,0 +1,36 @@
+{
+  "name": "pwa-complete-guide",
+  "version": "1.0.0",
+  "description": "A complete guide to PWAs. Building a simple Instagram clone.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -s public",
+    "server": "node --env-file=.env.local server/index.js",
+    "dev": "concurrently \"npm run start\" \"npm run server\""
+  },
+  "keywords": [
+    "pwa",
+    "progressive",
+    "web",
+    "app",
+    "complete",
+    "tutorial"
+  ],
+  "author": "Maximilian Schwarzmüller",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@types/serviceworker": "^0.0.123",
+    "concurrently": "^8.2.2",
+    "http-server": "^0.10.0",
+    "idb": "^8.0.2",
+    "workbox-cli": "^7.3.0",
+    "workbox-sw": "^7.3.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "web-push": "^3.6.7"
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
+}
