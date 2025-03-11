@@ -1,7 +1,7 @@
 {
-  "name": "pwa-complete-guide",
+  "name": "pwa-guide",
   "version": "1.0.0",
-  "description": "A complete guide to PWAs. Building a simple Instagram clone.",
+  "description": "A basic guide to PWAs. Building a simple Instagram clone.",
   "main": "index.js",
   "scripts": {
     "start": "http-server -c-1 -s public",
@@ -16,7 +16,6 @@
     "complete",
     "tutorial"
   ],
-  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^9.6.0",
