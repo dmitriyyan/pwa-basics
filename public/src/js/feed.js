@@ -154,7 +154,7 @@ async function submitPost(event) {
     await db.put('sync-posts', post);
     registration.sync.register('sync-new-posts');
 
-      form.reset();
+    form.reset();
 
     closeCreatePostModal();
 

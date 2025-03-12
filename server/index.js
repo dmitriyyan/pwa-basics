@@ -23,7 +23,7 @@ function generatePost() {
   return {
     id: faker.string.uuid(),
     image: {
-      url: faker.image.url({ width: 640, height: 480 }),
+      url: faker.image.urlPicsumPhotos({ width: 640, height: 480 }),
     },
     location: faker.location.city() + ', ' + faker.location.state({ abbreviated: true }),
     title: faker.lorem.words({ min: 2, max: 5 }),
@@ -41,6 +41,7 @@ function generatePosts(count = 10) {
 
 // Endpoint to fetch all posts
 app.get('/api/posts', (req, res) => {
+  console.log(posts);
   if (posts.length === 0) {
     posts.push(...generatePosts(3));
   }
@@ -83,7 +84,6 @@ app.post('/api/posts', (req, res) => {
       id,
       title,
       location,
-      // TODO: change to image from frontend
       image: {
         url: faker.image.url({ width: 640, height: 480 })
       }

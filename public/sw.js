@@ -125,7 +125,7 @@ async function syncPosts(event) {
   }
 }
 
-sw.addEventListener('sync',async  function (event) {
+sw.addEventListener('sync', async  function (event) {
   console.log('[Service Worker] Sync event');
   if (event.tag === 'sync-new-posts') {
     event.waitUntil(syncPosts(event));

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server -c-1 -s public",
     "server": "node --env-file=.env.local server/index.js",
-    "dev": "concurrently \"npm run start\" \"npm run server\""
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
+    "build": "workbox injectManifest workbox-config.js"
   },
   "keywords": [
     "pwa",
